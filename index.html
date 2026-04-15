@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulačka správních poplatků – plavidla</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Kalkulačka správních poplatků – plavidla</h1>
+
+  <form id="fee-form">
+    <fieldset>
+      <legend>Základní volba</legend>
+
+      <label for="typProhlidky">Typ prohlídky:</label>
+      <select id="typProhlidky" name="typProhlidky">
+        <option value="alg1">Pravidelná / mimořádná prohlídka</option>
+        <option value="alg2">První prohlídka</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Údaje o plavidle</legend>
+
+      <label for="druh">Druh plavidla:</label>
+      <select id="druh" name="druh">
+        <option value="plachetnice">Plachetnice</option>
+        <option value="jine">Jiné malé plavidlo</option>
+      </select>
+
+      <label>
+        <input type="checkbox" id="maKajutu" name="maKajutu">
+        Plavidlo má kajutu
+      </label>
+
+      <label for="vykon">Výkon strojů [kW]:</label>
+      <input type="number" id="vykon" name="vykon" min="0" step="0.1" value="0">
+
+      <label for="delka">Délka plavidla D [m]:</label>
+      <input type="number" id="delka" name="delka" min="0" step="0.01">
+
+      <label for="sirka">Šířka plavidla Š [m]:</label>
