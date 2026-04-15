@@ -10,10 +10,9 @@
 
   <form id="fee-form">
     <fieldset>
-      <legend>Základní volba</legend>
-
-      <label for="typProhlidky">Typ prohlídky:</label>
-      <select id="typProhlidky" name="typProhlidky">
+      <legend>Typ prohlídky</legend>
+      <label for="typProhlidky">Vyberte:</label>
+      <select id="typProhlidky">
         <option value="alg1">Pravidelná / mimořádná prohlídka</option>
         <option value="alg2">První prohlídka</option>
       </select>
@@ -23,20 +22,46 @@
       <legend>Údaje o plavidle</legend>
 
       <label for="druh">Druh plavidla:</label>
-      <select id="druh" name="druh">
+      <select id="druh">
         <option value="plachetnice">Plachetnice</option>
         <option value="jine">Jiné malé plavidlo</option>
       </select>
 
       <label>
-        <input type="checkbox" id="maKajutu" name="maKajutu">
+        <input type="checkbox" id="maKajutu">
         Plavidlo má kajutu
       </label>
 
-      <label for="vykon">Výkon strojů [kW]:</label>
-      <input type="number" id="vykon" name="vykon" min="0" step="0.1" value="0">
+      <label>
+        <input type="checkbox" id="maMotor">
+        Plavidlo má vlastní strojní pohon
+      </label>
 
       <label for="delka">Délka plavidla D [m]:</label>
-      <input type="number" id="delka" name="delka" min="0" step="0.01">
+      <input type="text" id="delka">
 
       <label for="sirka">Šířka plavidla Š [m]:</label>
+      <input type="text" id="sirka">
+
+      <label for="ponor">Maximální ponor [m]:</label>
+      <input type="text" id="ponor">
+
+      <label>
+        <input type="checkbox" id="maCE">
+        Plavidlo má CE prohlášení o shodě
+      </label>
+
+      <label>
+        <input type="checkbox" id="portal">
+        Podáváte žádost elektronicky přes Portál dopravy
+      </label>
+    </fieldset>
+
+    <button type="submit">Spočítat poplatek</button>
+  </form>
+
+  <div id="result" class="result"></div>
+
+  <script src="fees.js"></script>
+</body>
+</html>
